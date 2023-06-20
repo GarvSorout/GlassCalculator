@@ -9,20 +9,8 @@ public class Main {
         char operation = scanner.next().charAt(0);
         System.out.println("Enter the second number");
         double secondNumber = scanner.nextDouble();
-        output test = new output(0.0);
-        return test.calculator(firstNumber, operation, secondNumber);
-
-    }
-}
-
-class output {
-    double result;
-    //constructor for output class
-    public output(Double result){
-        this.result = result;
-    }
-    //method to run the calculation
-    public double calculator(double firstNumber, char operation, double secondNumber){
+        scanner.close();
+        double result = 0;
         switch (operation){
             case '*':
                 result = firstNumber * secondNumber;
@@ -44,6 +32,9 @@ class output {
 
 
         }
-       return result;
+        System.out.println("The result is: " + result);
+
+
     }
 }
+
